@@ -1,258 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Hoja de Vida - Oscar Rene</title>
-	<style>
-		:root {
-			--bg: #f5f7fb;
-			--card: #ffffff;
-			--text: #1f2a44;
-			--muted: #5b6780;
-			--accent: #0f766e;
-			--accent-soft: #ccfbf1;
-			--line: #dfe5f0;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Penaloza Curriculum Vitael</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 32px;
+            background: #f7f7f7;
+            color: #1f1f1f;
+        }
 
-		* {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
+        .contenedor {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
 
-		body {
-			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-			background: radial-gradient(circle at top right, #e6fffa, transparent 40%), var(--bg);
-			color: var(--text);
-			min-height: 100vh;
-			padding: 20px;
-		}
+        h1 {
+            margin-top: 0;
+            color: #0d3b66;
+        }
 
-		.container {
-			max-width: 980px;
-			margin: 0 auto;
-			background: var(--card);
-			border: 1px solid var(--line);
-			border-radius: 16px;
-			overflow: hidden;
-			box-shadow: 0 18px 40px rgba(25, 35, 60, 0.12);
-		}
+        h2 {
+            margin-top: 28px;
+            color: #0d3b66;
+        }
 
-		.header {
-			display: grid;
-			grid-template-columns: 170px 1fr;
-			gap: 18px;
-			align-items: center;
-			padding: 24px;
-			background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
-			border-bottom: 1px solid var(--line);
-		}
-
-		.photo-wrapper {
-			text-align: center;
-		}
-
-		.profile-photo {
-			width: 150px;
-			height: 150px;
-			object-fit: cover;
-			border-radius: 50%;
-			border: 4px solid #ffffff;
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-			background: #f1f5f9;
-		}
-
-		.upload-label {
-			display: inline-block;
-			margin-top: 10px;
-			padding: 8px 12px;
-			border-radius: 10px;
-			background: var(--accent-soft);
-			color: #134e4a;
-			font-size: 0.88rem;
-			cursor: pointer;
-			border: 1px solid #99f6e4;
-			transition: transform 0.2s ease;
-		}
-
-		.upload-label:hover {
-			transform: translateY(-1px);
-		}
-
-		#photoInput {
-			display: none;
-		}
-
-		.identity h1 {
-			font-size: 1.9rem;
-			margin-bottom: 6px;
-		}
-
-		.identity p {
-			color: var(--muted);
-			line-height: 1.45;
-		}
-
-		.grid {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 20px;
-			padding: 24px;
-		}
-
-		.section {
-			border: 1px solid var(--line);
-			border-radius: 12px;
-			padding: 16px;
-			background: #ffffff;
-		}
-
-		.section h2 {
-			font-size: 1rem;
-			margin-bottom: 12px;
-			color: var(--accent);
-			letter-spacing: 0.2px;
-			text-transform: uppercase;
-		}
-
-		ul {
-			padding-left: 18px;
-			color: var(--text);
-			line-height: 1.6;
-		}
-
-		.contact p,
-		.summary p {
-			margin-bottom: 8px;
-			line-height: 1.6;
-			color: var(--text);
-		}
-
-		.pill-list {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 8px;
-		}
-
-		.pill {
-			background: #eef2ff;
-			color: #3730a3;
-			border: 1px solid #c7d2fe;
-			padding: 6px 10px;
-			border-radius: 999px;
-			font-size: 0.85rem;
-		}
-
-		.full {
-			grid-column: 1 / -1;
-		}
-
-		@media (max-width: 780px) {
-			.header {
-				grid-template-columns: 1fr;
-				text-align: center;
-			}
-
-			.grid {
-				grid-template-columns: 1fr;
-			}
-		}
-	</style>
+        p {
+            line-height: 1.5;
+            margin: 8px 0;
+        }
+    </style>
 </head>
 <body>
-	<main class="container">
-		<header class="header">
-			<div class="photo-wrapper">
-				<img
-					id="previewPhoto"
-					class="profile-photo"
-					src="https://via.placeholder.com/300x300.png?text=Tu+Foto"
-					alt="Foto de perfil"
-				/>
-				<label for="photoInput" class="upload-label">Subir mi foto</label>
-				<input id="photoInput" type="file" accept="image/*" />
-			</div>
+    <main class="contenedor">
+        <h1>Oscar Penaloza Curriculum Vitael</h1>
 
-			<div class="identity">
-				<h1>Oscar Rene</h1>
-				<p><strong>Profesión:</strong> Desarrollador Web</p>
-				<p>
-					Apasionado por la tecnología, con enfoque en crear soluciones útiles,
-					interfaces claras y experiencias digitales de calidad.
-				</p>
-			</div>
-		</header>
+        <h2>Perfil Profesional</h2>
+        <p>Tecnico en mantenimiento y operacion bases de datos fundacion universitaria compensar</p>
 
-		<section class="grid">
-			<article class="section contact">
-				<h2>Contacto</h2>
-				<p><strong>Teléfono:</strong> +57 300 000 0000</p>
-				<p><strong>Correo:</strong> oscar@email.com</p>
-				<p><strong>Ciudad:</strong> Bogotá, Colombia</p>
-				<p><strong>LinkedIn:</strong> linkedin.com/in/oscar</p>
-			</article>
-
-			<article class="section summary">
-				<h2>Perfil Profesional</h2>
-				<p>
-					Profesional orientado a resultados con experiencia en desarrollo de
-					aplicaciones web, mantenimiento de sistemas y trabajo colaborativo.
-				</p>
-			</article>
-
-			<article class="section">
-				<h2>Experiencia</h2>
-				<ul>
-					<li>Desarrollador Frontend - Empresa ABC (2023 - Actualidad)</li>
-					<li>Soporte Técnico - Empresa XYZ (2021 - 2023)</li>
-				</ul>
-			</article>
-
-			<article class="section">
-				<h2>Educación</h2>
-				<ul>
-					<li>Tecnólogo en Desarrollo de Software - Institución Ejemplo</li>
-					<li>Curso de JavaScript Avanzado - Plataforma Online</li>
-				</ul>
-			</article>
-
-			<article class="section full">
-				<h2>Habilidades</h2>
-				<div class="pill-list">
-					<span class="pill">HTML</span>
-					<span class="pill">CSS</span>
-					<span class="pill">JavaScript</span>
-					<span class="pill">Git</span>
-					<span class="pill">Trabajo en equipo</span>
-					<span class="pill">Comunicación</span>
-				</div>
-			</article>
-		</section>
-	</main>
-
-	<script>
-		const input = document.getElementById("photoInput");
-		const preview = document.getElementById("previewPhoto");
-
-		input.addEventListener("change", (event) => {
-			const file = event.target.files && event.target.files[0];
-			if (!file) {
-				return;
-			}
-
-			if (!file.type.startsWith("image/")) {
-				alert("Por favor selecciona una imagen válida.");
-				input.value = "";
-				return;
-			}
-
-			const reader = new FileReader();
-			reader.onload = (e) => {
-				preview.src = e.target.result;
-			};
-			reader.readAsDataURL(file);
-		});
-	</script>
+        <h2>Habilidades</h2>
+        <p> Trabajo en equipo, liderazgo, comunicacion, trabajo bajo presion, solucion de problemas</p>
+		
+		<h2>Tecnologias</h2>
+		<p>sql, mysql, python, javar</p>
+    </main>
 </body>
 </html>
