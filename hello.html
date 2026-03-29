@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Penaloza Curriculum Vitael</title>
+    <title>Oscar Rene Peñaloza Ardila</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
 
         .contenedor {
             max-width: 760px;
-            margin: 0 auto;
+            margin: 1em auto;
             background: #ffffff;
             padding: 28px;
             border-radius: 10px;
@@ -40,10 +40,13 @@
 </head>
 <body>
     <main class="contenedor">
-        <h1>Oscar Penaloza Curriculum Vitael</h1>
+        <h1>Oscar Rene Peñaloza Ardila</h1>
 
         <h2>Perfil Profesional</h2>
-        <p>Tecnico en mantenimiento y operacion bases de datos fundacion universitaria compensar</p>
+        <p>Tecnico en mantenimiento y operacion bases de datos fundacion universitaria compensar
+			con experiencia en el area de soporte tecnico, mantenimiento de bases de datos y desarrollo de software.
+		
+		</p>
 
         <h2>Habilidades</h2>
         <p> Trabajo en equipo, liderazgo, comunicacion, trabajo bajo presion, solucion de problemas</p>
@@ -51,5 +54,42 @@
 		<h2>Tecnologias</h2>
 		<p>sql, mysql, python, javar</p>
     </main>
+
+    <script>
+        // Función para colorear palabras específicas en un párrafo
+        function colorearPalabras(selector, palabrasAColorear) {
+            const elementos = document.querySelectorAll(selector);
+            
+            elementos.forEach(elemento => {
+                let html = elemento.innerHTML;
+                
+                palabrasAColorear.forEach(item => {
+                    const regex = new RegExp('\\b' + item.palabra + '\\b', 'gi');
+                    html = html.replace(
+                        regex,
+                        `<span style="color: ${item.color}; font-weight: bold;">${item.palabra}</span>`
+                    );
+                });
+                
+                elemento.innerHTML = html;
+            });
+        }
+
+        // Ejecutar cuando carga la página
+        window.addEventListener('DOMContentLoaded', function() {
+            colorearPalabras('p', [
+                { palabra: 'mantenimiento', color: '#ff7f50' },
+                { palabra: 'bases de datos', color: '#0066cc' },
+                { palabra: 'software', color: '#28a745' },
+                { palabra: 'Fundación Universitaria Compensar', color: '#8B4513' },
+                { palabra: 'soporte tecnico', color: '#d63384' },
+                { palabra: 'Trabajo en equipo', color: '#6f42c1' },
+                { palabra: 'SQL', color: '#ff5722' },
+                { palabra: 'MySQL', color: '#4285f4' },
+                { palabra: 'Python', color: '#3776ab' },
+                { palabra: 'Java', color: '#ff0000' }
+            ]);
+        });
+    </script>
 </body>
 </html>
